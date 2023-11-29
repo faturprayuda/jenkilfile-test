@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building Image..
+                echo 'Building Image..'
                 sh 'docker build -f Dockerfile -t faturprayuda/hello-world'
                 echo 'Success Create Image'
                 sh 'docker push faturprayuda/hello-world'
