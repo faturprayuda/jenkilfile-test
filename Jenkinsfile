@@ -1,11 +1,11 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building Image..'
-                sh 'docker build -f Dockerfile -t faturprayuda/hello-world'
+                sh 'docker build . -f Dockerfile -t faturprayuda/hello-world'
                 echo 'Success Create Image'
                 sh 'docker push faturprayuda/hello-world'
                 echo 'Success Push Image'
