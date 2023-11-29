@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building Image..'
-                    sh 'export PATH=$PATH:/usr/bin/docker && docker build -t faturprayuda/hello-world .'
+                    sh 'export PATH=C:\Program Files\Docker\Docker && docker build -t faturprayuda/hello-world .'
                     echo 'Success Create Image'
                     sh 'docker push faturprayuda/hello-world'
                     echo 'Success Push Image'
